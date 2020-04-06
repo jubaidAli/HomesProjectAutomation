@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-06T13:11:50.294Z",
+    "end": "2020-04-06T13:11:50.872Z",
+    "duration": 578,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "7ff1a2a4-d1ad-478b-be40-4fda506f2dd0",
+      "title": "",
+      "fullFile": "cypress\\integration\\homesSearch.spec.js",
+      "file": "cypress\\integration\\homesSearch.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6d88656f-dc43-4d4f-8089-8bc1dbe190f6",
+          "title": "Homes Search property test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "searches Miami location propeties",
+              "fullTitle": "Homes Search property test searches Miami location propeties",
+              "timedOut": null,
+              "duration": 482,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//verify url and search location\ncy.log('Searching the location for Miami');\ncy.searchLocation({\n  location: 'Miami, FL'\n}); //Verifying the title matches correct location\ncy.log('Verifying the property searched is correct');\ncy.wait(500);\ncy.get('.property-list-title > .title').should('contain', 'Miami, FL'); //Select 6th element property listing\ncy.log('Clicking 6th property listing');\ncy.get('[data-testid=SR-ListingCellImg-6] > .property-card__result-card-img > .result-card-img-link > .lzy-img--container').click();\ncy.wait(500);",
+              "err": {
+                "message": "CypressError: `cy.route()` must be called with a `url`. It can be a string or regular expression.\n\nhttps://on.cypress.io/route\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homes Search property test`",
+                "estack": "CypressError: `cy.route()` must be called with a `url`. It can be a string or regular expression.\n\nhttps://on.cypress.io/route\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homes Search property test`\n    at cypressErr (http://localhost:55232/__cypress/runner/cypress_runner.js:146180:16)\n    at cypressErrByPath (http://localhost:55232/__cypress/runner/cypress_runner.js:146189:10)\n    at Object.throwErrByPath (http://localhost:55232/__cypress/runner/cypress_runner.js:146152:11)\n    at parseArgs (http://localhost:55232/__cypress/runner/cypress_runner.js:136943:21)\n    at Context.route (http://localhost:55232/__cypress/runner/cypress_runner.js:137026:16)\n    at http://localhost:55232/__cypress/runner/cypress_runner.js:143990:33\n    at tryCatcher (http://localhost:55232/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55232/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (http://localhost:55232/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromiseCtx (http://localhost:55232/__cypress/runner/cypress_runner.js:7088:10)\n    at _drainQueueStep (http://localhost:55232/__cypress/runner/cypress_runner.js:3770:12)\n    at _drainQueue (http://localhost:55232/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:55232/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (http://localhost:55232/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "9eedd646-ed5d-4ff9-977a-b39096603c3e",
+              "parentUUID": "6d88656f-dc43-4d4f-8089-8bc1dbe190f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "searches Los Angeles location propeties",
+              "fullTitle": "Homes Search property test searches Los Angeles location propeties",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify url and search location\ncy.log('Searching the location for Log Angeles');\ncy.searchLocation({\n  location: 'Los Angeles, CA'\n}); //Verifying the title matches correct location\ncy.log('Verifying the property searched is correct');\ncy.wait(500);\ncy.get('.property-list-title > .title').should('contain', 'Los Angeles, CA'); //Select 6th element property listing\ncy.log('Clicking 6th property listing');\ncy.get('[data-testid=SR-ListingCellImg-6] > .property-card__result-card-img > .result-card-img-link > .lzy-img--container').click();\ncy.wait(500);",
+              "err": {},
+              "uuid": "7aa9f3f5-ca96-4ef8-9599-1809fb139c4e",
+              "parentUUID": "6d88656f-dc43-4d4f-8089-8bc1dbe190f6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "searches Seattle location propeties",
+              "fullTitle": "Homes Search property test searches Seattle location propeties",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify url and search location\ncy.log('Searching the location for Seattle');\ncy.searchLocation({\n  location: 'Seattle, WA'\n}); //Verifying the title matches correct location\ncy.log('Verifying the property searched is correct');\ncy.wait(500);\ncy.get('.property-list-title > .title').should('contain', 'Seattle, WA'); //Select 6th element property listing\ncy.log('Clicking 6th property listing');\ncy.get('[data-testid=SR-ListingCellImg-6] > .property-card__result-card-img > .result-card-img-link > .lzy-img--container').click();\ncy.wait(500);",
+              "err": {},
+              "uuid": "f6c22f86-50e1-49de-b772-bbe80125ffc4",
+              "parentUUID": "6d88656f-dc43-4d4f-8089-8bc1dbe190f6",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9eedd646-ed5d-4ff9-977a-b39096603c3e"
+          ],
+          "pending": [],
+          "skipped": [
+            "7aa9f3f5-ca96-4ef8-9599-1809fb139c4e",
+            "f6c22f86-50e1-49de-b772-bbe80125ffc4"
+          ],
+          "duration": 482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
